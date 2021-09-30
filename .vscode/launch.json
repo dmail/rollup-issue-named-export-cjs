@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "node",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${file}",
+      // "runtimeVersion": "14.5.0",
+      "runtimeArgs": ["--inspect", "--unhandled-rejections=strict"],
+      "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
+      "sourceMaps": true,
+      "smartStep": true,
+      "skipFiles": [
+        // force-array-multiline
+        // "node_modules/**",
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}
